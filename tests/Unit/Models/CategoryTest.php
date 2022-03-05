@@ -3,10 +3,12 @@
 namespace Tests\Unit\Models;
 
 use App\Models\Category;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class CategoryTest extends TestCase
 {
+    use RefreshDatabase;
     /**
      * A basic unit test example.
      *
