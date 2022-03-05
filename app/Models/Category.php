@@ -21,6 +21,11 @@ class Category extends Model
         return $this->belongsTo(self::class, 'parent_id');
     }
 
+    public function products(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Product::class);
+    }
+
     public function scopeRoots(Builder $builder)
     {
         $builder->whereNull('parent_id');
